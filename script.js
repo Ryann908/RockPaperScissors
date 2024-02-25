@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    const game = ["Rock", "Scissors", "Paper"];
+    const game = [" Rock", " Scissors", " Paper"];
     return game[Math.floor(Math.random() * 3)];
     
     
@@ -11,7 +11,7 @@ buttons.forEach((button) => {
 
     button.addEventListener('click', () => {
         playerSelection = button.innerText;
-        const computerSelection = getComputerChoice();
+        let computerSelection = getComputerChoice();
         const para = document.querySelector('p');
         const result = document.createElement("div");
         const choose1 = document.createElement("div"); 
@@ -23,20 +23,24 @@ buttons.forEach((button) => {
         result.textContent = playRound(playerSelection, computerSelection);
         choose1.textContent = "You choose " + playerSelection;
         choose2.textContent = "Computer choose " + computerSelection;
+        console.log(playerSelection);
+        console.log(computerSelection);
+        console.log(playerSelection.length);
+        console.log(computerSelection.length);
         
     });
 });
 
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection.length == 4 && computerSelection.length == 8){
+    if (playerSelection.length == 5 && computerSelection.length == 9){
         return "You Win";
         // return "You Lose! Rock beats Scissors";
     }
-    else if (playerSelection.length == 8 && computerSelection.length == 4) {
+    else if (playerSelection.length == 9 && computerSelection.length == 5) {
         return "return You Lose! Rock beats Scissors";
     }
-    else if (playerSelection.length == 5 && computerSelection.length == 8){
+    else if (playerSelection.length == 6 && computerSelection.length == 9){
         return "You Lose! Scissors beats Paper";
     }
     else if (computerSelection.length == playerSelection.length){
