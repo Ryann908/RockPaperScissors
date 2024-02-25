@@ -1,3 +1,25 @@
-.empty{
-    e
+body{
+    background-image: url('img/back.jpeg');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button{
+    width: 0px;
+    height: 0px;
+    border: 0px;
+    font-size: 20px;
+    
+}
+img{
+    width: 200px;
+    height: auto;
 }
